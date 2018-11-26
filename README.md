@@ -16,8 +16,9 @@ Project idea short description:
 
 ## Project confirmation
 
-< to be filled by lecturer>
+Coole Idee. Fangen Sie klein an. Erweitern Sie nach und nach Ihre Applikation.
 
+Sie dürfen anfangen.
 
 ## Project delivery <to be filled by student>
 

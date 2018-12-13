@@ -1,19 +1,17 @@
 package webec
 
 class Exam {
-    Integer gradeID
     Date    date
     Integer weighting
     Integer grade
 
     // relationsships
-    static belongsTo=[name:Module]
+    static belongsTo=[module:Module]
 
     static constraints = {
-        gradeID   (blank:false, nullable: false)
-        date      (blank:false, nullable: false)
-        weighting (blank:false, nullable: false, min:1, max:100)
-        grade     (blank:false, nullable: false, min:1, max:6)
+        date      (nullable:false)
+        weighting (nullable:false, min: 1, max: 100)
+        grade     (nullable:true, min: 1, max: 6)
     }
 
     String toString(){

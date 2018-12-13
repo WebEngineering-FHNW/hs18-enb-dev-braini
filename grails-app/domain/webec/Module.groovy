@@ -6,13 +6,13 @@ class Module {
     String  location
 
     // relationsships
-    User     userID
-    Lecturer lecturerID
-    static   belongsTo=[exams:Exam]
+    User     user
+    Lecturer lecturer
+    static   hasMany=[exams:Exam]
 
     static constraints = {
         name     (blank:false, nullable: false, size:1..50)
-        semester (blank:false, nullable: false, min: 1, max: 16)
+        semester (nullable: false, min:1, max: 16)
         location (blank:false, nullable: false, size:1..50)
     }
 

@@ -9,12 +9,10 @@ class ExamController {
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
-    /*def index(Integer max) {
+    def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
         respond examService.list(params), model:[examCount: examService.count()]
-    }*/
-
-    def scaffold = Exam
+    }
 
     def show(Long id) {
         respond examService.get(id)

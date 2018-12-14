@@ -1,9 +1,9 @@
 package webec
 
 class Exam {
-    Date    date
-    Integer weighting
-    Integer grade
+    Date       date
+    Integer    weighting = 100
+    BigDecimal grade
 
     // relationsships
     static belongsTo=[module:Module]
@@ -11,7 +11,7 @@ class Exam {
     static constraints = {
         date      (nullable:false)
         weighting (nullable:false, min: 1, max: 100)
-        grade     (nullable:true, min: 1, max: 6)
+        grade     (nullable:true, min: 1.0, max: 6.0)
     }
 
     String toString(){

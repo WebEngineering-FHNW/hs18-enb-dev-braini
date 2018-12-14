@@ -4,7 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="GradeManager">
     <meta name="author" content="Markus Winter">
-    <!-- <link rel="icon" href="../../../../favicon.ico"> -->
+    <link rel="icon" type="image/png" href="/assets/grademanager.png" />
 
     <title>GradeManager</title>
 

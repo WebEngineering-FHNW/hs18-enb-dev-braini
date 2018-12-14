@@ -1,50 +1,63 @@
-<!doctype html>
-<html lang="en" class="no-js">
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <title>
-        <g:layoutTitle default="Grails"/>
-    </title>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <asset:link rel="icon" href="favicon.ico" type="image/x-ico" />
+<!DOCTYPE html>
+<html lang="de"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="GradeManager">
+    <meta name="author" content="Markus Winter">
+    <!-- <link rel="icon" href="../../../../favicon.ico"> -->
 
-    <asset:stylesheet src="application.css"/>
+    <title>GradeManager</title>
 
-    <g:layoutHead/>
+    <!-- Bootstrap core CSS -->
+    <asset:stylesheet src="bootstrap-4.1.3.min.css"/>
+    <asset:stylesheet src="style.css"/>
 </head>
-<body>
 
-    <div class="navbar navbar-default navbar-static-top" role="navigation">
+<body data-gr-c-s-loaded="true">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="/#">
-		    <asset:image src="grails.svg" alt="Grails Logo"/>
-                </a>
-            </div>
-            <div class="navbar-collapse collapse" aria-expanded="false" style="height: 0.8px;">
-                <ul class="nav navbar-nav navbar-right">
-                    <g:pageProperty name="page.nav" />
+            <a class="navbar-brand" href="#">GradeManager</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-md-end" id="nav">
+                <ul class="navbar-nav">
+                    <li class="nav-item mx-2 active">
+                        <a class="nav-link" href="#">Dashboard</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="#">Benutzer</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="#">Lehrer</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="#">Module</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="#">Prüfungen</a>
+                    </li>
                 </ul>
             </div>
         </div>
-    </div>
+    </nav>
 
-    <g:layoutBody/>
+    <main class="container">
+        <g:layoutBody/>
 
-    <div class="footer" role="contentinfo"></div>
+        <footer class="pt-4 my-md-5 pt-md-5 border-top">
+            <div class="row">
+                <div class="col-12 col-md">
+                    <small class="d-block mb-3 text-muted">&copy; 2018 - Markus Winter</small>
+                </div>
+            </div>
+        </footer>
+    </main>
 
-    <div id="spinner" class="spinner" style="display:none;">
-        <g:message code="spinner.alt" default="Loading&hellip;"/>
-    </div>
+<!-- Bootstrap core and jQueryJavaScript -->
+<script src="/assets/jquery-3.3.1.slim.min.js?compile=false"></script>
+<script src="/assets/bootstrap.bundle-4.1.3.min.js?compile=false"></script>
 
-    <asset:javascript src="application.js"/>
-
-</body>
-</html>
+</body></html>

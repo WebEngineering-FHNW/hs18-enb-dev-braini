@@ -5,8 +5,8 @@ class Exam {
     Integer    weighting = 100
     BigDecimal grade
 
-    // relationsships
-    static belongsTo=[module:Module]
+    // relationsship
+    static belongsTo = [module:Module]
 
     static constraints = {
         date      (nullable:false)

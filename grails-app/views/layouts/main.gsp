@@ -8,8 +8,10 @@
 
     <title>GradeManager</title>
 
-    <!-- Bootstrap core CSS -->
+    <!-- Bootstrap core CSS (EXTERNAL) -->
     <asset:stylesheet src="bootstrap-4.1.3.min.css"/>
+
+    <!-- Main CSS -->
     <asset:stylesheet src="style.css"/>
 </head>
 
@@ -56,7 +58,7 @@
         </footer>
     </main>
 
-<!-- Bootstrap core and jQueryJavaScript -->
+<!-- Bootstrap core and jQueryJavaScript (EXTERNAL) -->
 <script src="/assets/jquery-3.3.1.slim.min.js?compile=false"></script>
 <script src="/assets/bootstrap.bundle-4.1.3.min.js?compile=false"></script>
 

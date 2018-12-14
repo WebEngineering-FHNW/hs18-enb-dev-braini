@@ -1,76 +1,63 @@
-<!doctype html>
+
 <html>
 <head>
     <meta name="layout" content="main"/>
-    <title>Welcome to Grails</title>
 </head>
 <body>
-    <content tag="nav">
-        <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Application Status <span class="caret"></span></a>
-            <ul class="dropdown-menu">
-                <li><a href="#">Environment: ${grails.util.Environment.current.name}</a></li>
-                <li><a href="#">App profile: ${grailsApplication.config.grails?.profile}</a></li>
-                <li><a href="#">App version:
-                    <g:meta name="info.app.version"/></a>
-                </li>
-                <li role="separator" class="divider"></li>
-                <li><a href="#">Grails version:
-                    <g:meta name="info.app.grailsVersion"/></a>
-                </li>
-                <li><a href="#">Groovy version: ${GroovySystem.getVersion()}</a></li>
-                <li><a href="#">JVM version: ${System.getProperty('java.version')}</a></li>
-                <li role="separator" class="divider"></li>
-                <li><a href="#">Reloading active: ${grails.util.Environment.reloadingAgentEnabled}</a></li>
-            </ul>
-        </li>
-        <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Artefacts <span class="caret"></span></a>
-            <ul class="dropdown-menu">
-                <li><a href="#">Controllers: ${grailsApplication.controllerClasses.size()}</a></li>
-                <li><a href="#">Domains: ${grailsApplication.domainClasses.size()}</a></li>
-                <li><a href="#">Services: ${grailsApplication.serviceClasses.size()}</a></li>
-                <li><a href="#">Tag Libraries: ${grailsApplication.tagLibClasses.size()}</a></li>
-            </ul>
-        </li>
-        <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Installed Plugins <span class="caret"></span></a>
-            <ul class="dropdown-menu">
-                <g:each var="plugin" in="${applicationContext.getBean('pluginManager').allPlugins}">
-                    <li><a href="#">${plugin.name} - ${plugin.version}</a></li>
-                </g:each>
-            </ul>
-        </li>
-    </content>
 
-    <div class="svg" role="presentation">
-        <div class="grails-logo-container">
-            <asset:image src="grails-cupsonly-logo-white.svg" class="grails-logo"/>
-        </div>
-    </div>
-
-    <div id="content" role="main">
-        <section class="row colset-2-its">
-            <h1>Welcome to Grails</h1>
-
-            <p>
-                Congratulations, you have successfully started your first Grails application! At the moment
-                this is the default page, feel free to modify it to either redirect to a controller or display
-                whatever content you may choose. Below is a list of controllers that are currently deployed in
-                this application, click on each to execute its default action:
-            </p>
-
-            <div id="controllers" role="navigation">
-                <h2>Available Controllers:</h2>
-                <ul>
-                    <g:each var="c" in="${grailsApplication.controllerClasses.sort { it.fullName } }">
-                        <li class="controller">
-                            <g:link controller="${c.logicalPropertyName}">${c.fullName}</g:link>
-                        </li>
-                    </g:each>
+    <div class="row">
+        <% def count=6 %>
+        <g:each in="${(1..count).toList()}" var="c" >
+        <div class="col-12 col-md-6 col-lg-6 col-xl-4 mb-5 px-4">
+            <div class="card card-module bg-light mb-3">
+                <div class="card-header text-center">
+                    <h5>webeC</h5>
+                </div>
+                <div class="card-body">
+                    <p class="card-text">
+                        <asset:image src="icons/person.svg" alt="person"/>
+                        Christian Ribeaud
+                        <br>
+                        <asset:image src="icons/envelope-closed.svg" alt="envelope closed"/>
+                        <a href="mailto:christian.ribeaud@fhnw.ch">christian.ribeaud@fhnw.ch</a>
+                        <br>
+                        <asset:image src="icons/map-marker.svg" alt="map marker"/>
+                        5.2H14
+                    </p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><strong>Prüfungen</strong></li>
+                    <li class="list-group-item">
+                        <div class="d-flex bd-highlight">
+                            <div class="pr-2 bd-highlight" style="min-width: 71px;">28.11.18</div>
+                            <div class="px-2 bd-highlight">Zwischenprüfung 1</div>
+                            <div class="ml-auto bd-highlight text-right" style="min-width: 46px;">
+                                <span class="badge badge-pill badge-danger p-2 d-block"><strong>3.1</strong></span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="d-flex bd-highlight">
+                            <div class="pr-2 bd-highlight" style="min-width: 71px;">27.01.19</div>
+                            <div class="px-2 bd-highlight">Zwischenprüfung 2</div>
+                            <div class="ml-auto bd-highlight text-right" style="min-width: 46px;">
+                                <span class="badge badge-pill badge-success p-2 d-block"><strong>4.73</strong></span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="d-flex bd-highlight">
+                            <div class="pr-2 bd-highlight" style="min-width: 71px;">27.01.19</div>
+                            <div class="px-2 bd-highlight">MSP</div>
+                            <div class="ml-auto bd-highlight text-right" style="min-width: 46px;">
+                                <span class="badge badge-pill badge-light p-2 d-block"><strong>?</strong></span>
+                            </div>
+                        </div>
+                    </li>
                 </ul>
             </div>
-        </section>
+        </div>
+        </g:each>
     </div>
 
 </body>

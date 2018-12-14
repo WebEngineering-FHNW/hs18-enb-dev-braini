@@ -6,7 +6,9 @@
     <meta name="author" content="Markus Winter">
     <link rel="icon" type="image/png" href="/assets/grademanager.png" />
 
-    <title>GradeManager</title>
+    <title>
+        <g:layoutTitle default="GradeManager"/>
+    </title>
 
     <!-- Bootstrap core CSS (EXTERNAL) -->
     <asset:stylesheet src="bootstrap-4.1.3.min.css"/>

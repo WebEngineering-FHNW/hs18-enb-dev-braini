@@ -1,0 +1,16 @@
+body {
+    padding-top: 100px;
+}
+
+.card-module .card-text {
+    line-height: 1.7;
+    padding-left: 23px;
+}
+
+.card-module .card-text img {
+    position: absolute;
+    height: 14px;
+    opacity: .4;
+    margin-top: 7px;
+    margin-left: -23px;
+}

@@ -3,7 +3,7 @@
     <head>
         <meta name="layout" content="main" />
         <g:set var="entityName" value="${message(code: 'exam.label', default: 'Exam')}" />
-        <title>Prüfung aktualisieren</title>
+        <title>Prüfung editieren</title>
     </head>
     <body>
         <div class="nav-back">
@@ -12,7 +12,7 @@
         </div>
 
     <div id="edit-exam" class="content scaffold-edit" role="main">
-            <h1>Prüfung aktualisieren</h1>
+            <h1>Prüfung editieren</h1>
             <g:if test="${flash.message}">
             <div class="message" role="status">${flash.message}</div>
             </g:if>

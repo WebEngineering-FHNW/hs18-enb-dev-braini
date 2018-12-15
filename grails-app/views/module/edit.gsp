@@ -3,7 +3,7 @@
     <head>
         <meta name="layout" content="main" />
         <g:set var="entityName" value="${message(code: 'module.label', default: 'Module')}" />
-        <title>Modul aktualisieren</title>
+        <title>Modul editieren</title>
     </head>
     <body>
         <div class="nav-back">
@@ -12,7 +12,7 @@
         </div>
 
         <div id="edit-module" class="content scaffold-edit" role="main">
-            <h1>Modul aktualisieren</h1>
+            <h1>Modul editieren</h1>
             <g:if test="${flash.message}">
             <div class="message" role="status">${flash.message}</div>
             </g:if>

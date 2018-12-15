@@ -15,8 +15,10 @@
                             <div class="card-header text-center">
                                 <h5>${module.name}</h5>
                                 <div class="module-actions">
-                                    <asset:image src="icons/pencil.svg" alt="edit"/>
-                                    <asset:image src="icons/circle-x.svg" alt="delete"/>
+                                    <g:link action="edit" title="Modul editieren" resource="${module}"><asset:image src="icons/pencil.svg" alt="edit"/></g:link>
+                                    <g:form resource="${module}" method="DELETE" class="d-inline-block">
+                                        <a href="javascript: ;" onclick="c = confirm('Sind Sie sicher?'); if(c) parentNode.submit();"><asset:image src="icons/circle-x.svg" alt="delete"/></a>
+                                    </g:form>
                                 </div>
                             </div>
                             <div class="card-body">

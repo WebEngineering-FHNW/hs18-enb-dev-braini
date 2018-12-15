@@ -8,13 +8,20 @@
     <body>
         <div id="list-exam" class="content scaffold-list" role="main">
             <h1>Prüfungen</h1>
+
+            <g:if test="${!moduleList}">
+                <div class="alert alert-primary" style="position: absolute;">
+                    Noch keine Prüfung eingetragen.
+                </div>
+            </g:if>
+
             <g:if test="${flash.message}">
                 <div class="message" role="status">${flash.message}</div>
             </g:if>
             <f:table collection="${examList}" />
 
             <div class="new-entity">
-                <g:link class="btn btn-success pull-right" action="create">Prüfung anlegen</g:link>
+                <g:link class="btn btn-success pull-right" action="create">Prüfung hinzufügen</g:link>
             </div>
 
             <div class="pagination">

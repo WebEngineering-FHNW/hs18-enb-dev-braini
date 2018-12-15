@@ -3,11 +3,11 @@
     <head>
         <meta name="layout" content="main" />
         <g:set var="entityName" value="${message(code: 'user.label', default: 'User')}" />
-        <title>Benutzer anlegen</title>
+        <title>Benutzer hinzufügen</title>
     </head>
     <body>
         <div id="create-user" class="content scaffold-create" role="main">
-            <h1>Benutzer anlegen</h1>
+            <h1>Benutzer hinzufügen</h1>
             <g:if test="${flash.message}">
             <div class="message" role="status">${flash.message}</div>
             </g:if>
@@ -23,7 +23,7 @@
                     <f:all bean="user"/>
                 </fieldset>
                 <fieldset class="buttons">
-                    <g:submitButton name="create" class="save btn btn-success" value="Benutzer anlegen" />
+                    <g:submitButton name="create" class="save btn btn-success" value="Benutzer hinzufügen" />
                 </fieldset>
             </g:form>
         </div>

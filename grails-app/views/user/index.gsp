@@ -8,13 +8,20 @@
     <body>
         <div id="list-user" class="content scaffold-list" role="main">
             <h1>Benutzer</h1>
+
+            <g:if test="${!moduleList}">
+                <div class="alert alert-primary" style="position: absolute;">
+                    Noch keine Benutzer eingetragen.
+                </div>
+            </g:if>
+
             <g:if test="${flash.message}">
                 <div class="message" role="status">${flash.message}</div>
             </g:if>
             <f:table collection="${userList}" />
 
             <div class="new-entity">
-                <g:link class="btn btn-success pull-right" action="create">Benutzer anlegen</g:link>
+                <g:link class="btn btn-success pull-right" action="create">Benutzer hinzufügen</g:link>
             </div>
 
             <div class="pagination">

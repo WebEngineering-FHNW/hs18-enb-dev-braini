@@ -3,11 +3,11 @@
     <head>
         <meta name="layout" content="main" />
         <g:set var="entityName" value="${message(code: 'lecturer.label', default: 'Lecturer')}" />
-        <title>Lehrer anlegen</title>
+        <title>Lehrer hinzufügen</title>
     </head>
     <body>
         <div id="create-lecturer" class="content scaffold-create" role="main">
-            <h1>Lehrer anlegen</h1>
+            <h1>Lehrer hinzufügen</h1>
             <g:if test="${flash.message}">
             <div class="message" role="status">${flash.message}</div>
             </g:if>
@@ -23,7 +23,7 @@
                     <f:all bean="lecturer"/>
                 </fieldset>
                 <fieldset class="buttons">
-                    <g:submitButton name="create" class="save btn btn-success" value="Lehrer anlegen" />
+                    <g:submitButton name="create" class="save btn btn-success" value="Lehrer hinzufügen" />
                 </fieldset>
             </g:form>
         </div>

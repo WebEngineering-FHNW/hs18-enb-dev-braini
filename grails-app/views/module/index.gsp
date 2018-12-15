@@ -37,6 +37,7 @@
                                 <li class="list-group-item"><strong>Prüfungen</strong></li>
 
                                 <g:each in="${ module.exams.sort{a,b-> a.date.compareTo(b.date)} }" var="exam">
+                                    <g:link action="show" class="exam-link" resource="${exam}">
                                     <li class="list-group-item">
                                         <div class="d-flex bd-highlight">
                                             <div class="pr-2 bd-highlight" style="min-width: 71px;"><g:formatDate format="dd.MM.yy" date="${exam.date}"/></div>
@@ -49,6 +50,7 @@
                                             </div>
                                         </div>
                                     </li>
+                                    </g:link>
                                 </g:each>
 
                                 <g:if test="${!module.exams}">
@@ -56,6 +58,10 @@
                                         Noch keine Prüfungen eingetragen.
                                     </li>
                                 </g:if>
+
+                                <li class="list-group-item">
+                                    <g:link action="create" resource="exam" params="['module.id': module.id]">+ Prüfung hinzufügen</g:link>
+                                </li>
 
                             </ul>
                         </div>

@@ -136,3 +136,12 @@ body {
 .module-actions img:hover {
     opacity: 1;
 }
+
+.exam-link:hover li {
+    background-color: rgba(0, 0, 0, .03);
+}
+
+.exam-link, .exam-link:hover {
+    text-decoration: none;
+    color: #212529;
+}

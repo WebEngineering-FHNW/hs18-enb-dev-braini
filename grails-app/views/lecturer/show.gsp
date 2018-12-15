@@ -8,7 +8,7 @@
     <body>
         <div class="nav-back">
             <asset:image src="icons/arrow-left.svg" alt="arrow left" />
-            <g:link class="list" action="index">Zurück zu "Lehrer"</g:link>
+            <g:link class="list" action="index">Lehrer</g:link>
         </div>
 
         <div id="show-lecturer" class="content scaffold-show" role="main">

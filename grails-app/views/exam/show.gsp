@@ -8,7 +8,7 @@
     <body>
         <div class="nav-back">
             <asset:image src="icons/arrow-left.svg" alt="arrow left" />
-            <g:link class="list" action="index">Zurück zu "Prüfungen"</g:link>
+            <a href="/">Dashboard</a> <span class="text-black-50">oder</span> <g:link action="index">Prüfungen</g:link>
         </div>
 
         <div id="show-exam" class="content scaffold-show" role="main">

@@ -121,6 +121,18 @@ body {
     margin-right: 11px;
 }
 
-a.edit {
+.module-actions {
+    position:  absolute;
+    right: 11px;
+    top: 12px;
+}
 
+.module-actions img {
+    height: 12px;
+    opacity: .42;
+    margin-right: 5px;
+}
+
+.module-actions img:hover {
+    opacity: 1;
 }

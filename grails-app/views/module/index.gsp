@@ -8,52 +8,68 @@
     <body>
 
         <div class="row">
-            <g:each in="${moduleList.sort{a,b-> a.name.compareTo(b.name)}}" var="module" >
-                <div class="col-12 col-md-6 col-lg-6 col-xl-4 mb-5 px-4">
-                    <div class="card card-module bg-light mb-3">
-                        <div class="card-header text-center">
-                            <h5>${module.name}</h5>
-                        </div>
-                        <div class="card-body">
-                            <p class="card-text">
-                                <asset:image src="icons/person.svg" alt="person"/>
-                                ${module.lecturer.firstname} ${module.lecturer.lastname}
-                                <br>
-                                <asset:image src="icons/envelope-closed.svg" alt="envelope closed"/>
-                                <a href="mailto:${module.lecturer.email}">${module.lecturer.email}</a>
-                                <br>
-                                <asset:image src="icons/map-marker.svg" alt="map marker"/>
-                                ${module.location}
-                            </p>
-                        </div>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item"><strong>Prüfungen</strong></li>
+            <g:if test="${moduleList}">
+                <g:each in="${moduleList.sort{a,b-> a.name.compareTo(b.name)}}" var="module" >
+                    <div class="col-12 col-md-6 col-lg-6 col-xl-4 mb-5 px-4">
+                        <div class="card card-module bg-light mb-3">
+                            <div class="card-header text-center">
+                                <h5>${module.name}</h5>
+                                <div class="module-actions">
+                                    <asset:image src="icons/pencil.svg" alt="edit"/>
+                                    <asset:image src="icons/circle-x.svg" alt="delete"/>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text">
+                                    <asset:image src="icons/person.svg" alt="person"/>
+                                    ${module.lecturer.firstname} ${module.lecturer.lastname}
+                                    <br>
+                                    <asset:image src="icons/envelope-closed.svg" alt="envelope closed"/>
+                                    <a href="mailto:${module.lecturer.email}">${module.lecturer.email}</a>
+                                    <br>
+                                    <asset:image src="icons/map-marker.svg" alt="map marker"/>
+                                    ${module.location}
+                                </p>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item"><strong>Prüfungen</strong></li>
 
-                            <g:each in="${ module.exams.sort{a,b-> a.date.compareTo(b.date)} }" var="exam">
-                                <li class="list-group-item">
-                                    <div class="d-flex bd-highlight">
-                                        <div class="pr-2 bd-highlight" style="min-width: 71px;"><g:formatDate format="dd.MM.yy" date="${exam.date}"/></div>
-                                        <div class="px-2 bd-highlight">${exam.description}</div>
-                                        <div class="ml-auto bd-highlight text-right" style="min-width: 46px;">
-                                            <span class="badge badge-pill badge-<g:if test="${!exam.grade}">light</g:if><g:elseif test="${exam.grade < 4}">danger</g:elseif><g:else>success</g:else> p-2 d-block"><strong>
-                                                ${exam.grade}
-                                                <g:if test="${!exam.grade}"> ? </g:if>
-                                            </strong></span>
+                                <g:each in="${ module.exams.sort{a,b-> a.date.compareTo(b.date)} }" var="exam">
+                                    <li class="list-group-item">
+                                        <div class="d-flex bd-highlight">
+                                            <div class="pr-2 bd-highlight" style="min-width: 71px;"><g:formatDate format="dd.MM.yy" date="${exam.date}"/></div>
+                                            <div class="px-2 bd-highlight">${exam.description}</div>
+                                            <div class="ml-auto bd-highlight text-right" style="min-width: 46px;">
+                                                <span class="badge badge-pill badge-<g:if test="${!exam.grade}">light</g:if><g:elseif test="${exam.grade < 4}">danger</g:elseif><g:else>success</g:else> p-2 d-block"><strong>
+                                                    ${exam.grade}
+                                                    <g:if test="${!exam.grade}"> ? </g:if>
+                                                </strong></span>
+                                            </div>
                                         </div>
-                                    </div>
-                                </li>
-                            </g:each>
+                                    </li>
+                                </g:each>
 
-                            <g:if test="${!module.exams}">
-                                <li class="list-group-item text-black-50">
-                                    Noch keine Prüfungen eingetragen.
-                                </li>
-                            </g:if>
+                                <g:if test="${!module.exams}">
+                                    <li class="list-group-item text-black-50">
+                                        Noch keine Prüfungen eingetragen.
+                                    </li>
+                                </g:if>
 
-                        </ul>
+                            </ul>
+                        </div>
                     </div>
+                </g:each>
+            </g:if>
+
+            <g:if test="${!moduleList}">
+                <div class="alert alert-primary" style="position: absolute;">
+                    Noch keine Module eingetragen.
                 </div>
-            </g:each>
+            </g:if>
+
+            <div class="text-right d-block w-100 pr-3">
+                <g:link class="btn btn-success mr-1" action="create">Modul hinzufügen</g:link>
+            </div>
         </div>
 
     </body>

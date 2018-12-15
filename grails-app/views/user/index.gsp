@@ -14,7 +14,7 @@
             <f:table collection="${userList}" />
 
             <div class="new-entity">
-                <g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link>
+                <g:link class="btn btn-success pull-right" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link>
             </div>
 
             <div class="pagination">

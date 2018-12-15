@@ -14,3 +14,11 @@ body {
     margin-top: 7px;
     margin-left: -23px;
 }
+
+.new-entity {
+    text-align: right;
+}
+
+.content.scaffold-list > h1 {
+    margin-bottom: 20px;
+}

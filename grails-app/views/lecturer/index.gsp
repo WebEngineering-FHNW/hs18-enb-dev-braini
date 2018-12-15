@@ -9,13 +9,13 @@
         <div id="list-lecturer" class="content scaffold-list" role="main">
             <h1>Lehrer</h1>
 
-            <g:if test="${!moduleList}">
+            <g:if test="${!lecturerList}">
                 <div class="alert alert-primary" style="position: absolute;">
                     Noch keine Lehrer eingetragen.
                 </div>
             </g:if>
 
-            <g:if test="${flash.message}">
+            <g:if test="${flash.lecturerList}">
                 <div class="message" role="status">${flash.message}</div>
             </g:if>
             <f:table collection="${lecturerList}" />

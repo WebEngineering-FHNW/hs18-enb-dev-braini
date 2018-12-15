@@ -9,7 +9,7 @@
         <div id="list-user" class="content scaffold-list" role="main">
             <h1>Benutzer</h1>
 
-            <g:if test="${!moduleList}">
+            <g:if test="${!userList}">
                 <div class="alert alert-primary" style="position: absolute;">
                     Noch keine Benutzer eingetragen.
                 </div>

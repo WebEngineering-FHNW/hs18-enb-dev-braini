@@ -9,7 +9,7 @@
         <div id="list-exam" class="content scaffold-list" role="main">
             <h1>Prüfungen</h1>
 
-            <g:if test="${!moduleList}">
+            <g:if test="${!examList}">
                 <div class="alert alert-primary" style="position: absolute;">
                     Noch keine Prüfung eingetragen.
                 </div>

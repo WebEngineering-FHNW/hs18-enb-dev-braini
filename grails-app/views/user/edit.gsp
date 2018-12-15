@@ -3,7 +3,7 @@
     <head>
         <meta name="layout" content="main" />
         <g:set var="entityName" value="${message(code: 'user.label', default: 'User')}" />
-        <title>Benutzer anzeigen</title>
+        <title>Benutzer aktualisieren</title>
     </head>
     <body>
         <div class="nav-back">
@@ -12,7 +12,7 @@
         </div>
 
         <div id="edit-user" class="content scaffold-edit" role="main">
-            <h1>Benutzer anzeigen</h1>
+            <h1>Benutzer aktualisieren</h1>
             <g:if test="${flash.message}">
             <div class="message" role="status">${flash.message}</div>
             </g:if>

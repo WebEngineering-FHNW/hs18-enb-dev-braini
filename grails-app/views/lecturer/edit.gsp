@@ -3,7 +3,7 @@
     <head>
         <meta name="layout" content="main" />
         <g:set var="entityName" value="${message(code: 'lecturer.label', default: 'Lecturer')}" />
-        <title>Lehrer anzeigen</title>
+        <title>Lehrer aktualisieren</title>
     </head>
     <body>
         <div class="nav-back">
@@ -12,7 +12,7 @@
         </div>
 
     <div id="edit-lecturer" class="content scaffold-edit" role="main">
-            <h1>Lehrer anzeigen</h1>
+            <h1>Lehrer aktualisieren</h1>
             <g:if test="${flash.message}">
             <div class="message" role="status">${flash.message}</div>
             </g:if>

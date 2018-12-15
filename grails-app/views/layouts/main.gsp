@@ -21,27 +21,24 @@
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="#">GradeManager</a>
+            <a class="navbar-brand" href="/">GradeManager</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
             <div class="collapse navbar-collapse justify-content-md-end" id="nav">
                 <ul class="navbar-nav">
-                    <li class="nav-item mx-2 active">
-                        <a class="nav-link" href="#">Dashboard</a>
+                    <li class="nav-item mx-2 <g:if test="${request.getServletPath() == '/'}">active</g:if>">
+                        <a class="nav-link" href="/">Dashboard</a>
                     </li>
-                    <li class="nav-item mx-2">
-                        <a class="nav-link" href="#">Benutzer</a>
+                    <li class="nav-item mx-2 <g:if test="${request.getServletPath().contains("user")}">active</g:if>">
+                        <a class="nav-link" href="/user">Benutzer</a>
                     </li>
-                    <li class="nav-item mx-2">
-                        <a class="nav-link" href="#">Lehrer</a>
+                    <li class="nav-item mx-2 <g:if test="${request.getServletPath().contains("lecturer")}">active</g:if>">
+                        <a class="nav-link" href="/lecturer">Lehrer</a>
                     </li>
-                    <li class="nav-item mx-2">
-                        <a class="nav-link" href="#">Module</a>
-                    </li>
-                    <li class="nav-item mx-2">
-                        <a class="nav-link" href="#">Prüfungen</a>
+                    <li class="nav-item mx-2 <g:if test="${request.getServletPath().contains("exam")}">active</g:if>">
+                        <a class="nav-link" href="/exam">Prüfungen</a>
                     </li>
                 </ul>
             </div>

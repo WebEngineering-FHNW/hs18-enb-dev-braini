@@ -17,8 +17,62 @@ body {
 
 .new-entity {
     text-align: right;
+    padding-top: 6px;
 }
 
 .content.scaffold-list > h1 {
     margin-bottom: 20px;
+}
+
+.content.scaffold-create form {
+    margin-top: 30px;
+}
+
+.content.scaffold-create form fieldset.buttons {
+    text-align: right;
+}
+.content.scaffold-create form input.btn {
+    margin-top: 20px;
+}
+
+.fieldcontain label {
+    width: 150px;
+}
+
+.fieldcontain input, .fieldcontain select {
+    border-radius: .25rem;
+    border: 1px solid #ced4da;
+    width: calc(100% - 150px);
+    height: calc(2.25rem + 2px);
+    padding: .375rem .75rem;
+    margin-bottom: .8rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.fieldcontain select#date_day {
+    margin-left: -3px;
+}
+
+.fieldcontain select#date_day,
+.fieldcontain select#date_month,
+.fieldcontain select#date_year {
+    width: calc(33.3% - 60px);
+    margin-right: 10px;
+}
+.fieldcontain select#date_year {
+    margin-right: 0;
+}
+
+.fieldcontain ul {
+    display: none;
+}
+.fieldcontain a {
+    display: inline-block;
+    margin-top: 6px;
+    margin-bottom: 15px;
 }

@@ -3,17 +3,11 @@
     <head>
         <meta name="layout" content="main" />
         <g:set var="entityName" value="${message(code: 'exam.label', default: 'Exam')}" />
-        <title><g:message code="default.create.label" args="[entityName]" /></title>
+        <title>Prüfung anlegen</title>
     </head>
     <body>
-        <div class="nav" role="navigation">
-            <ul>
-                <li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
-                <li><g:link class="list" action="index"><g:message code="default.list.label" args="[entityName]" /></g:link></li>
-            </ul>
-        </div>
         <div id="create-exam" class="content scaffold-create" role="main">
-            <h1><g:message code="default.create.label" args="[entityName]" /></h1>
+            <h1>Prüfung anlegen</h1>
             <g:if test="${flash.message}">
             <div class="message" role="status">${flash.message}</div>
             </g:if>
@@ -29,7 +23,7 @@
                     <f:all bean="exam"/>
                 </fieldset>
                 <fieldset class="buttons">
-                    <g:submitButton name="create" class="save" value="${message(code: 'default.button.create.label', default: 'Create')}" />
+                    <g:submitButton name="create" class="save btn btn-success" value="Prüfung anlegen" />
                 </fieldset>
             </g:form>
         </div>

@@ -32,8 +32,13 @@ body {
     text-align: right;
 }
 
-.content.scaffold-create form input.btn {
-    margin-top: 20px;
+.content.scaffold-edit form fieldset.buttons {
+    text-align: right;
+}
+
+.content.scaffold-create form input.btn,
+.content.scaffold-edit form input.btn {
+    margin-top: 18px;
 }
 
 .fieldcontain label {
@@ -72,7 +77,8 @@ body {
 .fieldcontain ul {
     display: none;
 }
-.content.scaffold-create .fieldcontain a {
+.content.scaffold-create .fieldcontain a,
+.content.scaffold-edit .fieldcontain a {
     display: inline-block;
     margin-top: 6px;
     margin-bottom: 15px;

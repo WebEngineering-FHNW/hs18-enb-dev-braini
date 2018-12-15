@@ -70,7 +70,7 @@
             </g:if>
 
             <g:if test="${!moduleList}">
-                <div class="alert alert-primary" style="position: absolute;">
+                <div class="alert alert-primary position-absolute">
                     Noch keine Module eingetragen.
                 </div>
             </g:if>

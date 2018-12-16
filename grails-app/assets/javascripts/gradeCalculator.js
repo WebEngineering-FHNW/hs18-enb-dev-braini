@@ -27,6 +27,14 @@ function recalculateAvg() {
 
     // write average to DOM
     gradeTable.find('tr.grade-avg td:first strong').html(gradeAvg);
+
+    // set correct badge color class
+    var className = "success";
+    if (gradeAvg == '-') className = "light";
+    if (gradeAvg < 4) className = "danger";
+
+    gradeTable.find('tr.grade-avg td:first span').removeClass('badge-light badge-success badge-danger');
+    gradeTable.find('tr.grade-avg td:first span').addClass('badge-' + className);
 }
 
 /**
@@ -49,7 +57,9 @@ function deleteRow(row) {
  * Add given values to the table
  */
 
-$(document).on('submit',gradeForm,function(){
+$(document).on('submit',gradeForm,function(e){
+    e.preventDefault();
+
     $('#grade-table tr.add-form').before('<tr class="grade-entry">' +
         '<td class="grade">' + grade.val() + '</td>' +
         '<td class="weighting">' + weighting.val() + '</td>' +

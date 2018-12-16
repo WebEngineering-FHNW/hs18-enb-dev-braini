@@ -9,7 +9,7 @@
 <div>
     <h1>Noten-Rechner</h1>
 
-    <form id="grade-form" action="#">
+    <form id="grade-form">
         <table class="table w-25 mt-4" id="grade-table">
             <thead>
                 <tr>
@@ -26,7 +26,7 @@
                     <td><button class="btn btn-sm btn-success" type="submit" id="add">Hinzufügen</button></td>
                 </tr>
                 <tr class="grade-avg">
-                    <td><strong>-</strong></td>
+                    <td><span class="badge badge-pill badge-light p-2"><strong>-</strong></span></td>
                     <td colspan="2"><strong>Gewichteter Durchschnitt</strong></td>
                 </tr>
             </tbody>

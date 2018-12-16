@@ -40,6 +40,9 @@
                     <li class="nav-item mx-2 <g:if test="${request.getServletPath().contains("user")}">active</g:if>">
                         <a class="nav-link" href="/user">Benutzer</a>
                     </li>
+                    <li class="nav-item mx-2 <g:if test="${request.getServletPath().contains("gradeCalculator")}">active</g:if>">
+                        <a class="nav-link" href="/gradeCalculator">Noten-Rechner</a>
+                    </li>
                     <sec:ifLoggedIn>
                         <li class="nav-item mx-2">
                             <span class="ml-2 mr-3 text-white-50">|</span>

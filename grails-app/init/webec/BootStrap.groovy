@@ -28,9 +28,9 @@ class BootStrap {
         def aldg1 = new Module(name:'aldg1', semester:3, location:'6.1H07', lecturer:weck, user:user).save()
         def p3p4  = new Module(name:'p3/p4', semester:3, location:'5.4.H06', lecturer:scheuner, user:admin).save()
 
-        new Exam(date:Date.parse("yyyy-MM-dd hh:mm:ss", "2018-11-09 08:15:00"), description:'Zwischenprüfung 1', weighting:40, grade: 3.5, module:webec).save()
-        new Exam(date:Date.parse("yyyy-MM-dd hh:mm:ss", "2018-11-23 08:15:00"), description:'Zwischenprüfung 2', weighting:40, grade: 4.57, module:webec).save()
-        new Exam(date:Date.parse("yyyy-MM-dd hh:mm:ss", "2019-01-15 15:15:00"), description:'MSP', weighting:60, module:webec).save()
+        new Exam(date:Date.parse("yyyy-MM-dd hh:mm:ss", "2018-11-09 08:15:00"), description:'Zwischenprüfung 1', grade: 3.5, module:webec).save()
+        new Exam(date:Date.parse("yyyy-MM-dd hh:mm:ss", "2018-11-23 08:15:00"), description:'Zwischenprüfung 2', grade: 4.57, module:webec).save()
+        new Exam(date:Date.parse("yyyy-MM-dd hh:mm:ss", "2019-01-15 15:15:00"), description:'MSP', module:webec).save()
     }
     def destroy = {
     }

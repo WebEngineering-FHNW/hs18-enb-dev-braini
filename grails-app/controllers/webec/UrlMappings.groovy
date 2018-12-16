@@ -11,7 +11,6 @@ class UrlMappings {
 
         "/"(controller:"module")
         "500"(view:'/error')
-        "/indexGrails"(view:"/indexGrails")
         "500"(view:'/error')
         "404"(view:'/notFound')
     }

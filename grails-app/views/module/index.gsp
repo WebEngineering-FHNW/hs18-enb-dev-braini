@@ -34,7 +34,31 @@
                                 </p>
                             </div>
                             <ul class="list-group list-group-flush exam-list">
-                                <li class="list-group-item padding"><strong>Prüfungen</strong></li>
+                                <div class="d-none">
+                                    ${examCount = 0}
+                                    ${examAvgGrade = 0}
+
+                                    <g:each in="${ module.exams }" var="exam">
+                                        <g:if test="${exam.grade}">
+                                            ${examCount++}
+                                            ${examAvgGrade += exam.grade}
+                                        </g:if>
+                                    </g:each>
+
+                                    ${examAvgGrade = examAvgGrade/(double)examCount}}
+                                    ${examAvgGrade = (examAvgGrade as double).round(2)}
+
+                                    <g:if test="${examAvgGrade.isNaN()}">
+                                        ${examAvgGrade = "?"}
+                                    </g:if>
+                                </div>
+
+                                <li class="list-group-item padding">
+                                    <strong>Prüfungen</strong>
+                                    <div style="float:right;" class="d-inline-block  p-2 badge badge-pill badge-<g:if test="${examAvgGrade == "?"}">light</g:if><g:elseif test="${examAvgGrade < 4}">danger</g:elseif><g:else>success</g:else>"><strong>
+                                        &empty; ${examAvgGrade}
+                                    </strong></div>
+                                </li>
 
                                 <g:each in="${ module.exams.sort{a,b-> a.date.compareTo(b.date)} }" var="exam">
                                     <li class="list-group-item ">

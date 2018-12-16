@@ -162,6 +162,10 @@ body {
     color: #212529;
 }
 
+.exam-list li:last-child a {
+    color: #007bff;
+}
+
 .exam-list li:hover {
     background-color: rgba(0, 0, 0, .03);
 }

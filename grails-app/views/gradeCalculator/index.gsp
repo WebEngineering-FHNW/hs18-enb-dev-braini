@@ -7,10 +7,10 @@
 
 <body>
 <div>
-    <h1>Noten-Rechner</h1>
+    <h1 class="text-center">Noten-Rechner</h1>
 
     <form id="grade-form">
-        <table class="table w-25 mt-4" id="grade-table">
+        <table class="table" id="grade-table">
             <thead>
                 <tr>
                     <th>Note</th>

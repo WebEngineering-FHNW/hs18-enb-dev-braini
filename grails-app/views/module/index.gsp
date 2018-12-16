@@ -67,10 +67,10 @@
                                                 <div class="pr-2 bd-highlight" style="min-width: 71px;"><g:formatDate format="dd.MM.yy" date="${exam.date}"/></div>
                                                 <div class="px-2 bd-highlight">${exam.description}</div>
                                                 <div class="ml-auto bd-highlight text-right" style="min-width: 46px;">
-                                                    <span class="badge badge-pill badge-<g:if test="${!exam.grade}">light</g:if><g:elseif test="${exam.grade < 4}">danger</g:elseif><g:else>success</g:else> p-2 d-block"><strong>
+                                                    <span class="badge badge-pill badge-<g:if test="${!exam.grade}">light</g:if><g:elseif test="${exam.grade < 4}">danger</g:elseif><g:else>success</g:else> p-2 d-block">
                                                         ${exam.grade}
                                                         <g:if test="${!exam.grade}"> ? </g:if>
-                                                    </strong></span>
+                                                    </span>
                                                 </div>
                                             </div>
                                         </g:link>

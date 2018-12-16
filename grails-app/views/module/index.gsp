@@ -16,9 +16,9 @@
                                 <h5>${module.name}</h5>
                                 <div class="module-actions">
                                     <g:link action="edit" title="Modul editieren" resource="${module}"><asset:image src="icons/pencil.svg" alt="edit"/></g:link>
-                                    <g:form resource="${module}" method="DELETE" class="d-inline-block">
-                                        <a href="javascript: ;" onclick="c = confirm('Sind Sie sicher?'); if(c) parentNode.submit();"><asset:image src="icons/circle-x.svg" alt="delete"/></a>
-                                    </g:form>
+                                    <form action="/module/delete/${module.id}" method="post" class="d-inline-block"><input type="hidden" name="_method" value="DELETE">
+                                        <a href="javascript: ;" onclick="c = confirm('Sind Sie sicher?'); if(c) parentNode.submit();"><img src="/assets/icons/circle-x.svg" alt="delete"></a>
+                                    </form>
                                 </div>
                             </div>
                             <div class="card-body">
@@ -33,28 +33,28 @@
                                     ${module.location}
                                 </p>
                             </div>
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item"><strong>Prüfungen</strong></li>
+                            <ul class="list-group list-group-flush exam-list">
+                                <li class="list-group-item padding"><strong>Prüfungen</strong></li>
 
                                 <g:each in="${ module.exams.sort{a,b-> a.date.compareTo(b.date)} }" var="exam">
-                                    <g:link action="show" class="exam-link" resource="${exam}">
-                                    <li class="list-group-item">
-                                        <div class="d-flex bd-highlight">
-                                            <div class="pr-2 bd-highlight" style="min-width: 71px;"><g:formatDate format="dd.MM.yy" date="${exam.date}"/></div>
-                                            <div class="px-2 bd-highlight">${exam.description}</div>
-                                            <div class="ml-auto bd-highlight text-right" style="min-width: 46px;">
-                                                <span class="badge badge-pill badge-<g:if test="${!exam.grade}">light</g:if><g:elseif test="${exam.grade < 4}">danger</g:elseif><g:else>success</g:else> p-2 d-block"><strong>
-                                                    ${exam.grade}
-                                                    <g:if test="${!exam.grade}"> ? </g:if>
-                                                </strong></span>
+                                    <li class="list-group-item ">
+                                        <g:link action="show" class="exam-link" resource="${exam}">
+                                            <div class="d-flex bd-highlight">
+                                                <div class="pr-2 bd-highlight" style="min-width: 71px;"><g:formatDate format="dd.MM.yy" date="${exam.date}"/></div>
+                                                <div class="px-2 bd-highlight">${exam.description}</div>
+                                                <div class="ml-auto bd-highlight text-right" style="min-width: 46px;">
+                                                    <span class="badge badge-pill badge-<g:if test="${!exam.grade}">light</g:if><g:elseif test="${exam.grade < 4}">danger</g:elseif><g:else>success</g:else> p-2 d-block"><strong>
+                                                        ${exam.grade}
+                                                        <g:if test="${!exam.grade}"> ? </g:if>
+                                                    </strong></span>
+                                                </div>
                                             </div>
-                                        </div>
+                                        </g:link>
                                     </li>
-                                    </g:link>
                                 </g:each>
 
                                 <g:if test="${!module.exams}">
-                                    <li class="list-group-item text-black-50">
+                                    <li class="list-group-item text-black-50 padding">
                                         Noch keine Prüfungen eingetragen.
                                     </li>
                                 </g:if>

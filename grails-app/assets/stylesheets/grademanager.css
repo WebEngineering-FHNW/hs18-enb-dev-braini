@@ -144,11 +144,24 @@ body {
     opacity: 1;
 }
 
-.exam-link:hover li {
-    background-color: rgba(0, 0, 0, .03);
+.exam-list li {
+    padding-top: 0;
+    padding-bottom: 0;
 }
 
-.exam-link, .exam-link:hover {
+.exam-list li.padding {
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+.exam-list li a {
+    display: block;
+    padding-top: 12px;
+    padding-bottom: 12px;
     text-decoration: none;
     color: #212529;
+}
+
+.exam-list li:hover {
+    background-color: rgba(0, 0, 0, .03);
 }

@@ -3,7 +3,7 @@ package webec
 import grails.testing.gorm.DomainUnitTest
 import spock.lang.Specification
 
-class ModulSpec extends Specification implements DomainUnitTest<Modul> {
+class ModuleSpec extends Specification implements DomainUnitTest<Module> {
 
     def setup() {
     }

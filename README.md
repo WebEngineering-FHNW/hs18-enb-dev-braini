@@ -29,11 +29,11 @@ How to test the project:  (if other than `grailsw test-app`)
 Hand-written, static HTML 
 project description:      (if other than `index.html` in project root directory)
 
-External contributions:
+External contributions: jQuery, Bootstrap
 
-Other comments: 
+Other comments: Thank you for the possibility to do this proect
 
-I'm particular proud of:
+I'm particular proud of: GradeCalculator and general UI
 
 
 ## Project grading 

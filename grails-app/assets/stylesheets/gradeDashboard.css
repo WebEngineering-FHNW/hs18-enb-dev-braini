@@ -1,0 +1,54 @@
+/**
+ * Stylesheet to layout the dashboard
+ */
+
+/* the main elements (modules) */
+.card-module .card-text {
+    line-height: 1.7;
+    padding-left: 23px;
+}
+.card-module .card-text img {
+    position: absolute;
+    height: 14px;
+    opacity: .4;
+    margin-top: 7px;
+    margin-left: -23px;
+}
+
+/* edit and delete icons in the top right corner */
+.module-actions {
+    position:  absolute;
+    right: 11px;
+    top: 12px;
+}
+.module-actions img {
+    height: 12px;
+    opacity: .42;
+    margin-right: 5px;
+}
+.module-actions img:hover {
+    opacity: 1;
+}
+
+/* the list of exams */
+.exam-list li {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.exam-list li.padding {
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+.exam-list li a {
+    display: block;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-decoration: none;
+    color: #212529;
+}
+.exam-list li:last-child a {
+    color: #007bff;
+}
+.exam-list li:hover {
+    background-color: rgba(0, 0, 0, .03);
+}

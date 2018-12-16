@@ -3,6 +3,10 @@
 <head>
     <meta name="layout" content="main"/>
     <title>Noten-Rechner</title>
+
+    <content tag="stylesheets">
+        <asset:stylesheet src="gradeCalculator.css"/>
+    </content>
 </head>
 
 <body>

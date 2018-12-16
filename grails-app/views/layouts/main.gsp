@@ -14,7 +14,8 @@
     <asset:stylesheet src="bootstrap-4.1.3.min.css"/>
 
     <!-- Main CSS -->
-    <asset:stylesheet src="grademanager.css"/>
+    <asset:stylesheet src="gradeManager.css"/>
+    <g:pageProperty name="page.stylesheets"/>
 </head>
 
 <body data-gr-c-s-loaded="true">

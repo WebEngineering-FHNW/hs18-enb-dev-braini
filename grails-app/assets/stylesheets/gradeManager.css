@@ -1,0 +1,113 @@
+/**
+ * Stylesheet to layout the dashboard
+ */
+
+/* padding-top because the sticky navigation */
+body {
+    padding-top: 100px;
+}
+
+/* overview list */
+.content.scaffold-list > h1 {
+    margin-bottom: 20px;
+}
+
+/* detail view */
+.content.scaffold-show fieldset.buttons {
+    margin-top: 22px;
+}
+.content.scaffold-show .btn {
+    margin-right: 11px;
+}
+
+/* create & edit form */
+.content.scaffold-create form {
+    margin-top: 30px;
+}
+.content.scaffold-create form fieldset.buttons,
+.content.scaffold-edit form fieldset.buttons{
+    text-align: right;
+}
+.content.scaffold-create form input.btn,
+.content.scaffold-edit form input.btn {
+    margin-top: 18px;
+}
+.content.scaffold-create .fieldcontain a,
+.content.scaffold-edit .fieldcontain a {
+    display: inline-block;
+    margin-top: 6px;
+    margin-bottom: 15px;
+}
+
+
+/* various formular changes */
+.fieldcontain label {
+    width: 150px;
+}
+.fieldcontain input, .fieldcontain select {
+    border-radius: .25rem;
+    border: 1px solid #ced4da;
+    width: calc(100% - 150px);
+    height: calc(2.25rem + 2px);
+    padding: .375rem .75rem;
+    margin-bottom: .8rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.fieldcontain input[type=checkbox] {
+    width: 16px;
+    height: 16px;
+    margin: .8rem 0;
+    vertical-align: bottom;
+}
+.fieldcontain select#date_day {
+    margin-left: -3px;
+}
+.fieldcontain select#date_day,
+.fieldcontain select#date_month,
+.fieldcontain select#date_year {
+    width: calc(33.3% - 60px);
+    margin-right: 10px;
+}
+.fieldcontain select#date_year {
+    margin-right: 0;
+}
+.fieldcontain ul {
+    display: none;
+}
+
+
+/* back to link */
+.nav-back {
+    margin-bottom: 12px;
+}
+.nav-back img {
+    height: 12px;
+    margin-right: 4px;
+}
+
+/* property list layout*/
+.property-list {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 16px;
+}
+.property-list li {
+    padding: 3px 0;
+}
+.property-list .property-label {
+    display: inline-block;
+    width: 100px;
+    color: #9e9e9e;
+}
+.property-list .property-value {
+    display: inline-block;
+}
+.new-entity {
+    text-align: right;
+    padding-top: 6px;
+}

@@ -4,6 +4,10 @@
         <meta name="layout" content="main" />
         <g:set var="entityName" value="${message(code: 'module.label', default: 'Module')}" />
         <title><g:message code="default.list.label" args="[entityName]" /></title>
+
+        <content tag="stylesheets">
+            <asset:stylesheet src="gradeDashboard.css"/>
+        </content>
     </head>
     <body>
 

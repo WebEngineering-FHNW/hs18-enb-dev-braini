@@ -72,8 +72,9 @@
         </footer>
     </main>
 
-<!-- Bootstrap core and jQueryJavaScript (EXTERNAL) -->
-<script src="/assets/jquery-3.3.1.slim.min.js?compile=false"></script>
-<script src="/assets/bootstrap.bundle-4.1.3.min.js?compile=false"></script>
+    <!-- Bootstrap core and jQueryJavaScript (EXTERNAL) -->
+    <script src="/assets/jquery-3.3.1.slim.min.js?compile=false"></script>
+    <script src="/assets/bootstrap.bundle-4.1.3.min.js?compile=false"></script>
+    <g:pageProperty name="page.scripts"/>
 
 </body></html>

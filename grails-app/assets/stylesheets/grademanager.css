@@ -169,3 +169,29 @@ body {
 .exam-list li:hover {
     background-color: rgba(0, 0, 0, .03);
 }
+
+.grade-avg {
+    border-top: 2px solid; border-bottom: 4px double;
+}
+
+#grade, #weighting {
+    border: 1px solid #d7d7d7;
+    border-radius: .2rem;
+    padding: 2px 8px 3px 8px;
+    color: #515151;
+}
+
+td.del {
+    text-align: right;
+}
+
+td.del img {
+    opacity: .6;
+    height: 12px;
+    margin-right: 3px;
+}
+
+td.del img:hover {
+    opacity: 1;
+    cursor: pointer;
+}

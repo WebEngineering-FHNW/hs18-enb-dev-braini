@@ -5,7 +5,7 @@ import grails.plugin.springsecurity.annotation.Secured
 /**
  * Controller for Grade Calculator
  */
-@Secured(['ROLE_USER', 'ROLE_ADMIN'])
+@Secured(['IS_AUTHENTICATED_ANONYMOUSLY'])
 class GradeCalculatorController {
 
     def index() { }

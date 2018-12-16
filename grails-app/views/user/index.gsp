@@ -18,7 +18,7 @@
             <g:if test="${flash.message}">
                 <div class="message" role="status">${flash.message}</div>
             </g:if>
-            <f:table collection="${userList}" />
+            <f:table collection="${userList}" properties="lastname, firstname, username, accountLocked" />
 
             <div class="new-entity">
                 <g:link class="btn btn-success pull-right" action="create">Benutzer hinzufügen</g:link>

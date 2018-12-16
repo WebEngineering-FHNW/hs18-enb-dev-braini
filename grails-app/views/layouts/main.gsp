@@ -31,15 +31,22 @@
                     <li class="nav-item mx-2 <g:if test="${request.getServletPath() == '/'}">active</g:if>">
                         <a class="nav-link" href="/">Dashboard</a>
                     </li>
-                    <li class="nav-item mx-2 <g:if test="${request.getServletPath().contains("user")}">active</g:if>">
-                        <a class="nav-link" href="/user">Benutzer</a>
-                    </li>
                     <li class="nav-item mx-2 <g:if test="${request.getServletPath().contains("lecturer")}">active</g:if>">
                         <a class="nav-link" href="/lecturer">Lehrer</a>
                     </li>
                     <li class="nav-item mx-2 <g:if test="${request.getServletPath().contains("exam")}">active</g:if>">
                         <a class="nav-link" href="/exam">Prüfungen</a>
                     </li>
+                    <li class="nav-item mx-2 <g:if test="${request.getServletPath().contains("user")}">active</g:if>">
+                        <a class="nav-link" href="/user">Benutzer</a>
+                    </li>
+                    <sec:ifLoggedIn>
+                        <li class="nav-item mx-2">
+                            <span class="ml-2 mr-3 text-white-50">|</span>
+                            <g:link class="nav-link d-inline-block" controller="logout">Logout</g:link>
+                        </li>
+                    </sec:ifLoggedIn>
+
                 </ul>
             </div>
         </div>
@@ -50,8 +57,13 @@
 
         <footer class="pt-3 my-md-5 border-top">
             <div class="row">
-                <div class="col-12 col-md">
+                <div class="col-12 col-md-4">
                     <small class="d-block mb-3 text-muted">&copy; 2018 - Markus Winter</small>
+                </div>
+                <div class="col-12 col-md-8 text-right">
+                    <sec:ifLoggedIn>
+                        <small class="d-block mb-3 text-muted">Angemeldet als: <strong><sec:username /></strong></small>
+                    </sec:ifLoggedIn>
                 </div>
             </div>
         </footer>

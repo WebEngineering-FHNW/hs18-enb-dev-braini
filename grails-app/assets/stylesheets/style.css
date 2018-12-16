@@ -60,6 +60,13 @@ body {
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 
+.fieldcontain input[type=checkbox] {
+    width: 16px;
+    height: 16px;
+    margin: .8rem 0;
+    vertical-align: bottom;
+}
+
 .fieldcontain select#date_day {
     margin-left: -3px;
 }

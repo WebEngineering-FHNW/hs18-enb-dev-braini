@@ -9,7 +9,7 @@
             font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
             text-align: center;
             font-size: 16px;
-            line-height: 1.6;
+            line-height: 1.56;
             font-weight: 300;
         }
 
@@ -18,22 +18,44 @@
             margin: auto;
         }
 
-        #logo  { height: 130px; }
-        h1, h2 { font-weight: 600; }
-        h2     { margin: 36px 0 5px 0; }
-
-        .red   { color: #a90001; }
-        .green { color: #238623; }
-        strong { font-weight: 400; }
-
         ul {
             list-style: none;
             padding-left: 0;
             margin-top: 0;
         }
-        li {
-            padding: 0 0 4px 0;
+
+        .mockup {
+            display: inline-block;
+            width: 141px;
+            opacity: .7;
+            border: 1px solid #d2d2d2;
+            text-decoration: none;
+            color: #474747;
+            padding-bottom: 10px;
+            font-size: 14px;
+            border-radius: 3px;
         }
+
+        .mockup:hover {
+            opacity: 1;
+            border: 1px solid #b4b4b4;
+        }
+
+        .mockup img {
+            width: 100%;
+        }
+
+        h1, h2 { font-weight: 600; }
+        h2     { margin: 35px 0 4px 0; }
+        strong { font-weight: 400; }
+        li     { padding: 0 0 4px 0; }
+
+        #logo  { height: 132px; }
+
+        .red   { color: #a90001; }
+        .green { color: #238623; }
+        .padding { margin: 10px; }
+
     </style>
 </head>
 <body>
@@ -41,8 +63,10 @@
         <img id="logo" src="grails-app/assets/images/grademanager.png" alt="grademanager logo"/>
 
         <h1>GradeManager</h1>
-        <p><strong>Der einfache und unkomplizierte Prüfungs-Manager.</strong></p>
-        <p>Verwalte und plane sämtliche Prüfungen an einem Ort und behalte stets den Überblick über all deine Module und Noten.</p>
+        <p>
+            <strong>Der einfache und unkomplizierte Prüfungs-Manager.</strong><br>
+            Verwalte und plane sämtliche Prüfungen an einem Ort und behalte stets den Überblick über all deine Module und Noten.
+        </p>
 
         <h2>Features</h2>
         <ul>
@@ -50,21 +74,32 @@
             <li>Verwalten von Lehrern, Modulen, Prüfungen</li>
             <li>Verwalten von Benutzern (nur Admin)</li>
             <li>Dashboard mit allen Modulen übersichtlich dargestellt</li>
-            <li>Genügende Noten werden <span class="green">grün</span> hinterlegt</li>
-            <li>Ungenügende Noten werden <span class="red">rot</span> hinterlegt</li>
+            <li>Noten werden <span class="red">rot</span> bzw. <span class="green">grün</span> hinterlegt (un-/genügend)</li>
             <li>Pro Modul wird automatisch der Notendurchschnitt berechnet</li>
             <li>Pro Modul wird ein Lehrer und ein Ort hinterlegt</li>
             <li>Prüfungen können auch ohne Noten eingetragen werden</li>
         </ul>
 
+        <h2>Development Mockups</h2>
+        <a class="mockup" href="grails-app/assets/images/mockups/domain_model.png" target="_blank">
+            <img src="grails-app/assets/images/mockups/domain_model.png" alt="domain model" />
+            Domain Model
+        </a>
+        <a class="mockup padding" href="grails-app/assets/images/mockups/domain_model.png" target="_blank">
+            <img src="grails-app/assets/images/mockups/dashboard_mockup.png" alt="dashboard mockup"/>
+            Dashboard Mockup
+        </a>
+        <a class="mockup" href="grails-app/assets/images/mockups/domain_model.png" target="_blank">
+            <img src="grails-app/assets/images/mockups/grade_calculator.png" alt="grade calculator" />
+            Grade Calculator
+        </a>
+
+
+
         <h2>Versionen</h2>
         <ul>
-            <li>Grails: 3.3.8</li>
-            <li>Spring Security Core: 3.2.1</li>
-            <li>Groovy: 2.4.15</li>
-            <li>JVM: 1.8.0_144</li>
-            <li>jQuery: 3.3.1</li>
-            <li>Bootstrap: 4.1.3</li>
+            <li>Grails: 3.3.8 | Spring Security Core: 3.2.1 | Groovy: 2.4.15</li>
+            <li>JVM: 1.8.0_144 | jQuery: 3.3.1 | Bootstrap: 4.1.3</li>
         </ul>
     </div>
 

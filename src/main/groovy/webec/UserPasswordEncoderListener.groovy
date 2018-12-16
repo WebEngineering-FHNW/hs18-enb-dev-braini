@@ -8,6 +8,9 @@ import org.springframework.beans.factory.annotation.Autowired
 import grails.events.annotation.gorm.Listener
 import groovy.transform.CompileStatic
 
+/**
+ * Encode listener for passwords
+ */
 @CompileStatic
 class UserPasswordEncoderListener {
 

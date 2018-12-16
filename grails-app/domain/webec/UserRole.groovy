@@ -6,6 +6,9 @@ import groovy.transform.ToString
 import org.codehaus.groovy.util.HashCodeHelper
 import grails.compiler.GrailsCompileStatic
 
+/**
+ * Domain definitions for UserRole.
+ */
 @GrailsCompileStatic
 @ToString(cache=true, includeNames=true, includePackage=false)
 class UserRole implements Serializable {

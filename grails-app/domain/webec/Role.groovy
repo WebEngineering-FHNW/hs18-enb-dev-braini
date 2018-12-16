@@ -4,6 +4,9 @@ import groovy.transform.EqualsAndHashCode
 import groovy.transform.ToString
 import grails.compiler.GrailsCompileStatic
 
+/**
+ * Domain definitions for User Roles.
+ */
 @GrailsCompileStatic
 @EqualsAndHashCode(includes='authority')
 @ToString(includes='authority', includeNames=true, includePackage=false)

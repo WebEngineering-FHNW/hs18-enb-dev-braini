@@ -17,7 +17,7 @@
                                 <div class="module-actions">
                                     <g:link action="edit" title="Modul editieren" resource="${module}"><asset:image src="icons/pencil.svg" alt="edit"/></g:link>
                                     <form action="/module/delete/${module.id}" method="post" class="d-inline-block"><input type="hidden" name="_method" value="DELETE">
-                                        <a href="javascript: ;" onclick="c = confirm('Sind Sie sicher?'); if(c) parentNode.submit();"><img src="/assets/icons/circle-x.svg" alt="delete"></a>
+                                        <a href="javascript: " onclick="c = confirm('Sind Sie sicher?'); if(c) parentNode.submit();"><img src="/assets/icons/circle-x.svg" alt="delete"></a>
                                     </form>
                                 </div>
                             </div>

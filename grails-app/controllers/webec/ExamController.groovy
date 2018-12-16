@@ -4,6 +4,9 @@ import grails.plugin.springsecurity.annotation.Secured
 import grails.validation.ValidationException
 import static org.springframework.http.HttpStatus.*
 
+/**
+ * Controller for Exam
+ */
 @Secured(['ROLE_USER', 'ROLE_ADMIN'])
 class ExamController {
 
@@ -11,19 +14,38 @@ class ExamController {
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
+    /**
+     * Lists all exams
+     * @param max number of records
+     * @return
+     */
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
         respond examService.list(params), model:[examCount: examService.count()]
     }
 
+    /**
+     * Lists one exam
+     * @param id from exam
+     * @return
+     */
     def show(Long id) {
         respond examService.get(id)
     }
 
+    /**
+     * Creates a new exam
+     * @return
+     */
     def create() {
         respond new Exam(params)
     }
 
+    /**
+     * Saves the given exam
+     * @param exam
+     * @return
+     */
     def save(Exam exam) {
         if (exam == null) {
             notFound()
@@ -46,10 +68,20 @@ class ExamController {
         }
     }
 
+    /**
+     * Edits an exam
+     * @param id from exam
+     * @return
+     */
     def edit(Long id) {
         respond examService.get(id)
     }
 
+    /**
+     * Updates the given exam
+     * @param exam
+     * @return
+     */
     def update(Exam exam) {
         if (exam == null) {
             notFound()
@@ -72,6 +104,11 @@ class ExamController {
         }
     }
 
+    /**
+     * Deletes the given exam
+     * @param id from exam
+     * @return
+     */
     def delete(Long id) {
         if (id == null) {
             notFound()
@@ -89,6 +126,9 @@ class ExamController {
         }
     }
 
+    /**
+     * Not found message
+     */
     protected void notFound() {
         request.withFormat {
             form multipartForm {

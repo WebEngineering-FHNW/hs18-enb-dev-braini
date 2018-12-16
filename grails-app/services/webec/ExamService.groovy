@@ -2,6 +2,9 @@ package webec
 
 import grails.gorm.services.Service
 
+/**
+ * Service-Interface for Exam
+ */
 @Service(Exam)
 interface ExamService {
 

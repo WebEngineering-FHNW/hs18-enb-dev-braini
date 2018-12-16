@@ -4,6 +4,10 @@ import grails.plugin.springsecurity.annotation.Secured
 import grails.validation.ValidationException
 import static org.springframework.http.HttpStatus.*
 
+
+/**
+ * Controller for Lecturer
+ */
 @Secured(['ROLE_USER', 'ROLE_ADMIN'])
 class LecturerController {
 
@@ -11,19 +15,38 @@ class LecturerController {
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
+    /**
+     * Lists all lecturers
+     * @param max number of records
+     * @return
+     */
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
         respond lecturerService.list(params), model:[lecturerCount: lecturerService.count()]
     }
 
+    /**
+     * Lists one lecturer
+     * @param id from lecturer
+     * @return
+     */
     def show(Long id) {
         respond lecturerService.get(id)
     }
 
+    /**
+     * Creates a new lecturer
+     * @return
+     */
     def create() {
         respond new Lecturer(params)
     }
 
+    /**
+     * Saves the given lecturer
+     * @param lecturer
+     * @return
+     */
     def save(Lecturer lecturer) {
         if (lecturer == null) {
             notFound()
@@ -46,10 +69,20 @@ class LecturerController {
         }
     }
 
+    /**
+     * Edits an lecturer
+     * @param id from lecturer
+     * @return
+     */
     def edit(Long id) {
         respond lecturerService.get(id)
     }
 
+    /**
+     * Updates the given lecturer
+     * @param lecturer
+     * @return
+     */
     def update(Lecturer lecturer) {
         if (lecturer == null) {
             notFound()
@@ -72,6 +105,11 @@ class LecturerController {
         }
     }
 
+    /**
+     * Deletes the given lecturer
+     * @param id from lecturer
+     * @return
+     */
     def delete(Long id) {
         if (id == null) {
             notFound()
@@ -89,6 +127,9 @@ class LecturerController {
         }
     }
 
+    /**
+     * Not found message
+     */
     protected void notFound() {
         request.withFormat {
             form multipartForm {

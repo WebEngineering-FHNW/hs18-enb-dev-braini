@@ -1,5 +1,8 @@
 package webec
 
+/**
+ * URL Mappings
+ */
 class UrlMappings {
 
     static mappings = {

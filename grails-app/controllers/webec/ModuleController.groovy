@@ -4,6 +4,10 @@ import grails.plugin.springsecurity.annotation.Secured
 import grails.validation.ValidationException
 import static org.springframework.http.HttpStatus.*
 
+
+/**
+ * Controller for Module
+ */
 @Secured(['ROLE_USER', 'ROLE_ADMIN'])
 class ModuleController {
 
@@ -11,19 +15,38 @@ class ModuleController {
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
+    /**
+     * Lists all modules
+     * @param max number of records
+     * @return
+     */
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
         respond moduleService.list(params), model:[moduleCount: moduleService.count()]
     }
 
+    /**
+     * Lists one module
+     * @param id from module
+     * @return
+     */
     def show(Long id) {
         respond moduleService.get(id)
     }
 
+    /**
+     * Creates a new module
+     * @return
+     */
     def create() {
         respond new Module(params)
     }
 
+    /**
+     * Saves the given module
+     * @param module
+     * @return
+     */
     def save(Module module) {
         if (module == null) {
             notFound()
@@ -46,10 +69,20 @@ class ModuleController {
         }
     }
 
+    /**
+     * Edits an module
+     * @param id from module
+     * @return
+     */
     def edit(Long id) {
         respond moduleService.get(id)
     }
 
+    /**
+     * Updates the given module
+     * @param module
+     * @return
+     */
     def update(Module module) {
         if (module == null) {
             notFound()
@@ -72,6 +105,11 @@ class ModuleController {
         }
     }
 
+    /**
+     * Deletes the given module
+     * @param id from module
+     * @return
+     */
     def delete(Long id) {
         if (id == null) {
             notFound()
@@ -89,6 +127,9 @@ class ModuleController {
         }
     }
 
+    /**
+     * Not found message
+     */
     protected void notFound() {
         request.withFormat {
             form multipartForm {

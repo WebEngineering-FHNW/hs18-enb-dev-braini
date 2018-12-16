@@ -4,6 +4,9 @@ import grails.plugin.springsecurity.annotation.Secured
 import grails.validation.ValidationException
 import static org.springframework.http.HttpStatus.*
 
+/**
+ * Controller for User
+ */
 @Secured(['ROLE_ADMIN'])
 class UserController {
 
@@ -11,19 +14,38 @@ class UserController {
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
+    /**
+     * Lists all users
+     * @param max number of records
+     * @return
+     */
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
         respond userService.list(params), model:[userCount: userService.count()]
     }
 
+    /**
+     * Lists one user
+     * @param id from user
+     * @return
+     */
     def show(Long id) {
         respond userService.get(id)
     }
 
+    /**
+     * Creates a new user
+     * @return
+     */
     def create() {
         respond new User(params)
     }
 
+    /**
+     * Saves the given user
+     * @param user
+     * @return
+     */
     def save(User user) {
         if (user == null) {
             notFound()
@@ -46,10 +68,20 @@ class UserController {
         }
     }
 
+    /**
+     * Edits an user
+     * @param id from user
+     * @return
+     */
     def edit(Long id) {
         respond userService.get(id)
     }
 
+    /**
+     * Updates the given user
+     * @param user
+     * @return
+     */
     def update(User user) {
         if (user == null) {
             notFound()
@@ -72,6 +104,11 @@ class UserController {
         }
     }
 
+    /**
+     * Deletes the given user
+     * @param id from user
+     * @return
+     */
     def delete(Long id) {
         if (id == null) {
             notFound()
@@ -89,6 +126,9 @@ class UserController {
         }
     }
 
+    /**
+     * Not found message
+     */
     protected void notFound() {
         request.withFormat {
             form multipartForm {

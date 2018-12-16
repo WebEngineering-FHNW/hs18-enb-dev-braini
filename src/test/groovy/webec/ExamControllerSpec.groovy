@@ -10,9 +10,9 @@ class ExamControllerSpec extends Specification implements ControllerUnitTest<Exa
     def populateValidParams(params) {
         assert params != null
 
-        // TODO: Populate valid properties like...
-        //params["name"] = 'someValidName'
-        assert false, "TODO: Provide a populateValidParams() implementation for this generated test suite"
+        params["date"] = Date.parse("yyyy-MM-dd hh:mm:ss", "2018-11-09 08:15:00")
+        params["description"] = 'MSP'
+        params["grade"] = 4.5
     }
 
     void "Test the index action returns the correct model"() {

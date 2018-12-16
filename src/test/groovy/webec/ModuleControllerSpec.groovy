@@ -10,9 +10,9 @@ class ModuleControllerSpec extends Specification implements ControllerUnitTest<M
     def populateValidParams(params) {
         assert params != null
 
-        // TODO: Populate valid properties like...
-        //params["name"] = 'someValidName'
-        assert false, "TODO: Provide a populateValidParams() implementation for this generated test suite"
+        params["name"] = 'webeC'
+        params["semester"] = 3
+        params["location"] = '6.1H07'
     }
 
     void "Test the index action returns the correct model"() {
@@ -45,7 +45,7 @@ class ModuleControllerSpec extends Specification implements ControllerUnitTest<M
         controller.save(null)
 
         then:"A 404 error is returned"
-        response.redirectedUrl == '/module/index'
+        response.redirectedUrl == '/'
         flash.message != null
     }
 
@@ -149,7 +149,7 @@ class ModuleControllerSpec extends Specification implements ControllerUnitTest<M
         controller.update(null)
 
         then:"A 404 error is returned"
-        response.redirectedUrl == '/module/index'
+        response.redirectedUrl == '/'
         flash.message != null
     }
 
@@ -199,7 +199,7 @@ class ModuleControllerSpec extends Specification implements ControllerUnitTest<M
         controller.delete(null)
 
         then:"A 404 is returned"
-        response.redirectedUrl == '/module/index'
+        response.redirectedUrl == '/'
         flash.message != null
     }
 
@@ -215,7 +215,7 @@ class ModuleControllerSpec extends Specification implements ControllerUnitTest<M
         controller.delete(2)
 
         then:"The user is redirected to index"
-        response.redirectedUrl == '/module/index'
+        response.redirectedUrl == '/'
         flash.message != null
     }
 }

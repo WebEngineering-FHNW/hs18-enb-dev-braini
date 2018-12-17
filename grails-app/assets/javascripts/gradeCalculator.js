@@ -82,3 +82,6 @@ $('#gradeCalculatorReset').click(function (e) {
     cleanUpForm();
     recalculateAvg();
 });
+
+// focus the grade input field
+$('#grade').focus();

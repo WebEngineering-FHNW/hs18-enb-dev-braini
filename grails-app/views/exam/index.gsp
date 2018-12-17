@@ -21,7 +21,7 @@
             <f:table collection="${examList}" />
 
             <div class="new-entity">
-                <g:link class="btn btn-success pull-right" action="create">Prüfung hinzufügen</g:link>
+                <g:link class="btn btn-success pull-right" action="create">+ Prüfung hinzufügen</g:link>
             </div>
 
             <div class="pagination">

@@ -104,7 +104,7 @@
             </g:if>
 
             <div class="text-right d-block w-100 pr-3">
-                <g:link class="btn btn-success mr-1" action="create">Modul hinzufügen</g:link>
+                <g:link class="btn btn-success mr-1" action="create">+ Modul hinzufügen</g:link>
             </div>
         </div>
 

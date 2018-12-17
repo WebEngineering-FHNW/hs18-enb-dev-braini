@@ -4,14 +4,17 @@
 
 /* main wrapper */
 #grade-table {
-    width: 380px;
-    margin: 31px auto 90px auto;
+    width: 352px;
+    margin: 31px auto 20px auto;
 }
 
-/* tr average */
+/* tr average and badge pill */
 .grade-avg {
     border-top: 2px solid;
     border-bottom: 4px double;
+}
+.badge.badge-pill {
+    margin-left: 2px;
 }
 
 /* input fields */
@@ -21,6 +24,9 @@
     padding: 2px 8px 3px 8px;
     color: #515151;
 }
+
+/* grade entry layout */
+td.grade, td.weighting { padding-left: 21px; }
 
 /* delete icon */
 td.del {
@@ -34,4 +40,11 @@ td.del img {
 }
 td.del img:hover {
     opacity: 1;
+}
+
+/* reset link */
+#gradeCalculatorReset {
+    display: block;
+    text-align: center;
+    margin-bottom: 80px;
 }

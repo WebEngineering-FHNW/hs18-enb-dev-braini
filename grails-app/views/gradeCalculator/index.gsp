@@ -31,11 +31,13 @@
                 </tr>
                 <tr class="grade-avg">
                     <td><span class="badge badge-pill badge-light p-2"><strong>-</strong></span></td>
-                    <td colspan="2"><strong>Gewichteter Durchschnitt</strong></td>
+                    <td colspan="2">&nbsp;&nbsp;<strong>Gewichteter Durchschnitt</strong></td>
                 </tr>
             </tbody>
         </table>
     </form>
+
+    <a href="#" id="gradeCalculatorReset">Tabelle zurücksetzen</a>
 </div>
 
 <content tag="scripts">

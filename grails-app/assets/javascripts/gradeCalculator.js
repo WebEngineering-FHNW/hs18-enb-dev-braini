@@ -56,7 +56,6 @@ function deleteRow(row) {
 /**
  * Add given values to the table
  */
-
 $(document).on('submit',gradeForm,function(e){
     e.preventDefault();
 
@@ -65,6 +64,20 @@ $(document).on('submit',gradeForm,function(e){
         '<td class="weighting">' + weighting.val() + '</td>' +
         '<td class="del"><img onclick="deleteRow($(this).parents(\'tr\'))" src="/assets/icons/circle-x.svg" alt="delete"></td>' +
         '</tr>');
+
+    cleanUpForm();
+    recalculateAvg();
+});
+
+/**
+ * Delete all grade rows
+ */
+$('#gradeCalculatorReset').click(function (e) {
+    e.preventDefault();
+
+    gradeTable.find('tr.grade-entry').each(function (index, el) {
+        $(this).remove();
+    });
 
     cleanUpForm();
     recalculateAvg();

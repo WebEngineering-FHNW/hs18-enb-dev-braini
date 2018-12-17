@@ -37,7 +37,7 @@
         </table>
     </form>
 
-    <a href="#" id="gradeCalculatorReset">Tabelle zurücksetzen</a>
+    <a href="#" id="gradeCalculatorReset">Rechner zurücksetzen</a>
 </div>
 
 <content tag="scripts">

@@ -12,7 +12,7 @@ function recalculateAvg() {
     var gradeWeighting = 0;
 
     // find all grade and calculate the average
-    gradeTable.find('tr.grade-entry').each(function (index, el) {
+    gradeTable.find('tr.grade-entry').each(function () {
         var grade     = $(this).find('td.grade').html();
         var weighting = $(this).find('td.weighting').html();
         gradeAvg += grade*weighting;
@@ -75,7 +75,7 @@ $(document).on('submit',gradeForm,function(e){
 $('#gradeCalculatorReset').click(function (e) {
     e.preventDefault();
 
-    gradeTable.find('tr.grade-entry').each(function (index, el) {
+    gradeTable.find('tr.grade-entry').each(function () {
         $(this).remove();
     });
 

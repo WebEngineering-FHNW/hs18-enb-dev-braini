@@ -18,11 +18,14 @@
     <g:pageProperty name="page.stylesheets"/>
 </head>
 
-<body data-gr-c-s-loaded="true">
+<body>
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="/">GradeManager</a>
+            <a class="navbar-brand" href="/">
+                <asset:image src="grademanager.png" alt="grademanager logo"/>
+                GradeManager
+            </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -59,12 +62,12 @@
     <main class="container">
         <g:layoutBody/>
 
-        <footer class="pt-3 my-md-5 border-top">
+        <footer class="pt-3 mt-5 border-top">
             <div class="row">
-                <div class="col-12 col-md-4">
-                    <small class="d-block mb-3 text-muted">&copy; 2018 - Markus Winter</small>
+                <div class="col-12 col-sm-4">
+                    <small class="d-block sm-3 text-muted">&copy; 2018 - Markus Winter</small>
                 </div>
-                <div class="col-12 col-md-8 text-right">
+                <div class="col-12 col-sm-8 text-right">
                     <sec:ifLoggedIn>
                         <small class="d-block mb-3 text-muted">Angemeldet als: <strong><sec:username /></strong></small>
                     </sec:ifLoggedIn>

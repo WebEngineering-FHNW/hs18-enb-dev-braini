@@ -15,7 +15,7 @@
         <input type="email" name="username" id="username" class="form-control mt-4" placeholder="E-Mail Adresse" required="" autofocus="">
 
         <label for="password" class="sr-only">Passwort</label>
-        <input type="password" name="password" id="password" class="form-control" placeholder="Passwort" required="" style="border-top: 0;">
+        <input type="password" name="password" id="password" class="form-control" placeholder="Passwort" required="" style="margin-top: 8px;">
 
         <div class="checkbox mt-2 mb-3">
             <label>

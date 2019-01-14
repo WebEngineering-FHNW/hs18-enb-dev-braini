@@ -35,7 +35,13 @@ Other comments: Thank you for the possibility to do this proect
 
 I'm particular proud of: GradeCalculator and general UI
 
-
 ## Project grading 
 
-< to be filled by lecturer>
+Actually, I only have following _negative_ remarks:
+ 
+* Generated pages have some errors.
+
+Congratulations! You've done an amazing job. You've created a really nice, sophisticated, from scratch, database backed,
+security enabled, in a rather tight time frame and following an industrial-grade engineering standard.
+
+Grade: **6.0**
